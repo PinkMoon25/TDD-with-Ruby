@@ -18,7 +18,7 @@ RSpec.describe Solver do
     it 'should receive a method reverse and return reveresed string' do
       reversed = Solver.new
       expect(reversed).to receive(:reverse).with('hello').and_return('olleh')
-      expect(reveresed.reverse('hello')).to eql('olleh')
+      expect(reversed.reverse('hello')).to eql('olleh')
     end
   end
   describe '#fizzbuzz' do

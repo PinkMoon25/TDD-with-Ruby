@@ -17,15 +17,15 @@ RSpec.describe Solver do
   describe '#reverse' do
     it 'should receive a method reverse and return reveresed string' do
       reversed = Solver.new
-      expect(reversed).to receive(:reverse).and_return('hello')
-      expect(reveresed.reverse).to eql('olleh')
+      expect(reversed).to receive(:reverse).with('hello').and_return('olleh')
+      expect(reveresed.reverse('hello')).to eql('olleh')
     end
   end
   describe '#fizzbuzz' do
     it 'should receive a method fizzbuzz and return string "fizz", "buzz" or "fizzbuzz" based on input' do
       fizz = Solver.new
-      expect(fizz).to receive(:fizzbuzz).and_return(15)
-      expect(fizz.fizzbuzz).to eql('1,2,fizz,4,buzz,fizz,7,8,fizz,buzz,11,fizz,13,14,fizzbuzz')
+      expect(fizz).to receive(:fizzbuzz).with(15).and_return('1,2,fizz,4,buzz,fizz,7,8,fizz,buzz,11,fizz,13,14,fizzbuzz')
+      expect(fizz.fizzbuzz(15)).to eql('1,2,fizz,4,buzz,fizz,7,8,fizz,buzz,11,fizz,13,14,fizzbuzz')
     end
   end
 end

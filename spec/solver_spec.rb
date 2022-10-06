@@ -21,4 +21,11 @@ Rspec.describe Solver do
       expect(reveresed.reverse).to eql('olleh')
     end
   end
+  describe '#fizzbuzz' do
+    it 'should receive a method fizzbuzz and return string "fizz", "buzz" or "fizzbuzz" based on input' do
+      fizz = Solver.new
+      expect(fizz).to receive(:fizzbuzz).and_return(15)
+      expect(fizz.fizzbuzz).to eql('1,2,fizz,4,buzz,fizz,7,8,fizz,buzz,11,fizz,13,14,fizzbuzz')
+    end
+  end
 end

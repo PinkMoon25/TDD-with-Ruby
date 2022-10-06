@@ -1,6 +1,6 @@
 require_relative '../solver'
 
-Rspec.describe Solver do
+RSpec.describe Solver do
   describe '#solver' do
     it 'should be an instance of a class solver' do
       solver = Solver.new
@@ -10,8 +10,8 @@ Rspec.describe Solver do
   describe '#factorial' do
     it 'should receive a method factorial and return factorial of n' do
       fact = Solver.new
-      expect(fact).to receive(:factorial).and_return(5)
-      expect(fact.factorial).to eql(120)
+      expect(fact).to receive(:factorial).with(5).and_return(120)
+      expect(fact.factorial(5)).to eql(120)
     end
   end
   describe '#reverse' do

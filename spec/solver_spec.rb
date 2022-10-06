@@ -14,4 +14,11 @@ Rspec.describe Solver do
       expect(fact.factorial).to eql(120)
     end
   end
+  describe '#reverse' do
+    it 'should receive a method reverse and return reveresed string' do
+      reversed = Solver.new
+      expect(reversed).to receive(:reverse).and_return('hello')
+      expect(reveresed.reverse).to eql('olleh')
+    end
+  end
 end
